@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تطبيق واجهة سوداء</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-image: url('https://dl.dir.freefiremobile.com/common/web_event/official2.ff.garena.all/202210/c11fd3c42b73afb36692311e71968192.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 30px 0;
+            font-family: 'Cairo', sans-serif;
+            box-sizing: border-box;
+        }
+
+        .header-image {
+            width: 40px;
+            height: 40px;
+            object-fit: contain;
+        }
+
+        .instruction-banner {
+            color: white;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 15px 25px;
+            border-radius: 15px;
+            text-align: center;
+            font-size: 1rem;
+            max-width: 1024px;
+            width: 80%;
+            border: 1px solid #444;
+            line-height: 1.6;
+        }
+
+        .green-text {
+            color: #39FF14;
+            font-weight: bold;
+        }
+
+        .download-btn {
+            display: inline-block;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+
+        .download-btn img {
+            width: 40px;
+            height: 40px;
+        }
+
+        .chat-container {
+            width: 90%;
+            max-width: 400px;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        input[type="text"] {
+            flex: 1;
+            padding: 10px 15px;
+            border-radius: 25px;
+            border: 1px solid #333;
+            background-color: #1a1a1a;
+            color: white;
+            font-family: 'Cairo', sans-serif;
+            font-weight: 300;
+            outline: none;
+            height: 40px;
+            box-sizing: border-box;
+        }
+
+        .send-btn {
+            background: none;
+            border: none;
+            padding: 0;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .send-btn img {
+            width: 40px;
+            height: 40px;
+            transition: 0.3s;
+        }
+
+        .send-btn:hover img {
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+
+    <img src="https://i.ibb.co/wrRkyGW3/Picsart-26-05-31-11-31-46-142.png" alt="Logo" class="header-image">
+
+    <div class="instruction-banner" id="banner">
+        مرحباً بك في موقعنا، أنا هنا لمساعدتك:<br>
+        <span class="green-text">- اكتب رقم 1 للحصول على طريقة تركيب قلتشات أو سكربتات</span><br>
+        <span class="green-text">- اكتب رقم 2 للحصول على رابط تحميل تطبيق ZArchiver</span><br>
+        <span class="green-text">- اكتب رقم 3 إذا سيتم نشر قلتشات قريباً</span>
+    </div>
+
+    <div class="chat-container">
+        <input type="text" id="userInput" placeholder="اكتب رسالتك هنا...">
+        <button class="send-btn" onclick="checkInput()">
+            <img src="https://images.icon-icons.com/2248/PNG/96/send_circle_icon_136236.png" alt="إرسال">
+        </button>
+    </div>
+
+    <script>
+        function checkInput() {
+            const input = document.getElementById('userInput').value.trim();
+            const banner = document.getElementById('banner');
+            
+            if (input === '1') {
+                banner.innerText = 'طريقة تركيب قلتشات أو سكربتات: لازم تحمل تطبيق ZArchiver ثم توافق على جميع شروط تطبيق، ثم تقوم بتحميل ملف القلتش من موقعنا، ثم تدخل تطبيق ZArchiver وتذهب إلى Downloads، تجد ملف القلتش تضغط عليه وتظهر كلمة (استخراج)، ثم يدخلك إلى ملف free fire.com، تضغط على الملف ضغطة مطولة ثم تظهر كلمة (نسخ)، تضغط عليها ثم تنظر إلى الأعلى وتجد كلمة Download وتضغط عليها وتختار (ذاكرة الجهاز)، ثم تضغط على زر اللصق.';
+            } else if (input === '2') {
+                banner.innerHTML = 'رابط تحميل تطبيق ZArchiver هنا: <br> <a href="https://www.mediafire.com/file/ax1mm235gn3l1o7/ZArchiver.apk/file" target="_blank" class="download-btn"><img src="https://images.icon-icons.com/1182/PNG/96/1490129349-rounded05_82190.png" alt="تحميل"></a>';
+            } else if (input === '3') {
+                banner.innerText = 'نعم سيتم نشر قلتشات قريباً من مطور موقع.';
+            } else if (input !== "") {
+                banner.innerText = 'عذراً، يرجى كتابة الرقم 1 أو 2 أو 3 فقط للحصول على الخدمات.';
+            }
+        }
+    </script>
+</body>
+  </html>
+  
